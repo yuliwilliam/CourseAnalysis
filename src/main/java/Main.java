@@ -17,7 +17,7 @@ public class Main {
         List<Division> courses = collector.getCourses();
 
         try {
-            MySQLdb mySQLdb = new MySQLdb("jdbc:mysql://localhost:3306/course_data", "superuser", "pass");
+            SQLManager sqlManager = new SQLManager();
 
             int totalCourse = 0;
             for (Division d : courses) {
@@ -27,10 +27,14 @@ public class Main {
 
             for (Division division : courses) {
                 for (Course course : division.getCourses()) {
-                    logger.info("updating data for course " + course.getCode() + " " + i + "/" + totalCourse);
-                    i++;
-                    mySQLdb.runUpdate("insert into courses (code, courseName, credits, campus, department" +
-                            ", term, division) values (" + course.generateQueryValues() + ")");
+                    if (!sqlManager.courseExist(course)) {
+                        logger.info("updating data for course " + course.getCode() + " " + i + "/" + totalCourse);
+                        i++;
+                        sqlManager.insertCourse(course);
+                    }
+                    else {
+                        logger.info("course exists");
+                    }
                 }
             }
             logger.info("finished updating databases");

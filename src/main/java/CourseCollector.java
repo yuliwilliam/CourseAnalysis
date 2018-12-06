@@ -82,7 +82,7 @@ public class CourseCollector {
         }
 
         logger.info("collected all " + courses.size() + " divisions " + totalCourse + " courses");
-        writeToTxt();
+//        writeToTxt();
         driver.quit();
     }
 
@@ -101,6 +101,7 @@ public class CourseCollector {
             driver.findElement(By.id("courseSearchResults_next")).click();
             SeleniumUtility.waitVisible(driver, "id", "courseSearchResults_info");
         }
+        //end case, courses on the last page
         for (WebElement course : driver.findElement(By.cssSelector("#courseSearchResults > tbody")).findElements(By.tagName("tr"))) {
             List<WebElement> fields = course.findElements(By.tagName("td"));
             division.addCourse(new Course(fields.get(1).getText(), fields.get(2).getText(), fields.get(3).getText(), fields.get(4).getText(), fields.get(5).getText(), fields.get(6).getText(), fields.get(7).getText()));
@@ -108,23 +109,22 @@ public class CourseCollector {
         return division;
     }
 
+
     private void writeToTxt() {
         try {
             PrintWriter writer = new PrintWriter("courses.txt", "UTF-8");
-            for (Division division : courses){
+            for (Division division : courses) {
                 for (Course course : division.getCourses()) {
                     writer.println(course);
                 }
+            }
+            writer.close();
+        } catch (
+                Exception e) {
+            e.printStackTrace();
         }
-        writer.close();
-    } catch(
-    Exception e)
 
-    {
-        e.printStackTrace();
     }
-
-}
 
     public List<Division> getCourses() {
         return courses;

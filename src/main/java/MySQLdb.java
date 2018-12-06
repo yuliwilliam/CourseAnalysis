@@ -30,6 +30,7 @@ public class MySQLdb {
         if (!connection.isClosed()) {
             logger.info("connected to database");
         } else {
+            logger.error("unable to connect to database");
             throw new RuntimeException("failed to connect to database with host: " + HOST + " username: " + USERNAME + " password: " + PASSWORD);
         }
     }
