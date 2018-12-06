@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Course {
 
     private String code;
@@ -46,11 +48,29 @@ public class Course {
         return division;
     }
 
-    public String generateQueryValues(){
+    public String generateQueryValues() {
         return String.format("'%s', '%s', '%s', '%s', '%s', '%s', '%s'",
-                getCode().replaceAll("'","''"), getCourseName().replaceAll("'","''"), getCredits().replaceAll("'","''"), getCampus().replaceAll("'","''"),
-                getDepartment().replaceAll("'","''"), getTerm().replaceAll("'","''"), getDivision().replaceAll("'","''"));
+                getCode().replaceAll("'", "''"), getCourseName().replaceAll("'", "''"), getCredits().replaceAll("'", "''"), getCampus().replaceAll("'", "''"),
+                getDepartment().replaceAll("'", "''"), getTerm().replaceAll("'", "''"), getDivision().replaceAll("'", "''"));
     }
+
+    /*
+    course in different term consider same course
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Course course = (Course) o;
+        return Objects.equals(code, course.code) &&
+                Objects.equals(courseName, course.courseName) &&
+                Objects.equals(credits, course.credits) &&
+                Objects.equals(campus, course.campus) &&
+                Objects.equals(department, course.department) &&
+                Objects.equals(division, course.division);
+    }
+
+
     @Override
     public String toString() {
         return "Course{" +

@@ -9,16 +9,23 @@ public class Division {
         this.courses = new ArrayList<>();
     }
 
-    public void addCourse(Course course){
-        courses.add(course);
+    public void addCourse(Course course) {
+        if (!courseExist(course)) {
+            courses.add(course);
+        }
     }
 
     public List<Course> getCourses() {
         return courses;
     }
 
-    public int getSize(){
+    public int getSize() {
         return courses.size();
+    }
+
+    private boolean courseExist(Course course) {
+        return courses.contains(course);
+
     }
 
     @Override

@@ -5,6 +5,8 @@ import java.sql.SQLException;
 public class SQLManager {
 
     private MySQLdb mySQLdb;
+
+    //default connect to this database
     private final String USERNAME = "superuser";
     private final String PASSWORD = "pass";
     private final String HOST = "jdbc:mysql://localhost:3306/course_data";
