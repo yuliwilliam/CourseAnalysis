@@ -5,14 +5,70 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.lang.ref.PhantomReference;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 public class DataCollector {
     private final static Logger logger = LogManager.getLogger(DataCollector.class.getName());
-    private final String USERNAME = "";
-    private final String PASSWORD = "";
+    private final String USERNAME = "yulizhi";
+    private final String PASSWORD = "YlZ19980511";
+
+    private final static int numOfThread = 5;
+
+    private List<Department> courses;
+
+    public DataCollector(List<Department> courses) {
+        this.courses = courses;
+    }
 
     public void collectData() {
+
+        List<Thread> threads = new ArrayList<>();
+        for (int i = 0; i < courses.size(); i++) {
+
+            if(courses.get(i).getCourses().get(0).getDepartment().equals("Mathematics")){
+            final int index = i;
+            //init a individual driver for each thread
+            Thread temp = new Thread(() -> {
+                logger.info("collecting category " + (index + 1) + "/" + courses.size() + " - " + courses.get(index).getCourses().get(0).getDepartment() + " courses");
+                collectCoursesUnderDepartment(courses.get(index));
+                logger.info("collected category " + courses.get(index).getCourses().get(0).getDepartment() + " courses");
+            });
+            threads.add(temp);
+
+        }}
+
+
+        //thread pool, controlling number of threads running at the same time
+        ExecutorService pool = Executors.newFixedThreadPool(numOfThread);
+        for (Thread thread : threads) {
+            pool.execute(thread);
+        }
+        pool.shutdown();
+
+        //wait till all threads finished, then all courses collected
+        try {
+            pool.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        //wait till all threads finished, then all courses collected
+        for (Thread thread : threads) {
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+    public void collectCoursesUnderDepartment(Department department) {
 
         WebDriver driver = SeleniumUtility.initWebDriver();
         driver.get("https://acorn.utoronto.ca/");
@@ -25,54 +81,64 @@ public class DataCollector {
 
         logger.info("logged in to account");
 
-        WebElement searchingBar = driver.findElement(By.id("typeaheadInput"));
-        searchingBar.sendKeys("MAT135H1");
-        logger.info("searching for course");
-        while (searchingBar.getAttribute("class").contains("loadingIcon") || searchingBar.getAttribute("class").contains("ng-empty")) {
-//            System.out.println(searchingBar.getAttribute("class"));
-        }
-//        System.out.println(searchingBar.getAttribute("class"));
-
-        while (driver.findElement(By.cssSelector("#typeahead-search > div.ut-typeahead-container")).getAttribute("search-view-more-message").contains("Scroll down to show more results... (0 Courses found)")) {
-//            System.out.println(driver.findElement(By.cssSelector("#typeahead-search > div.ut-typeahead-container")).getAttribute("search-view-more-message"));
-        }
 
 
-        WebElement course = null;
-        while (course == null) {
-            List<WebElement> courses = driver.findElements(By.tagName("li"));
-            while (courses.size() == 0) {
-                courses = driver.findElements(By.tagName("li"));
-                logger.warn("relocating course element");
-            }
+        for (Course course : department.getCourses()) {
+            driver.findElement(By.id("typeaheadInput")).clear();
+            driver.findElement(By.id("typeaheadInput")).sendKeys("MAT135H1");
+            driver.findElement(By.id("typeaheadInput")).click();
+            logger.info("searching for course " + course.getCode());
 
-            for (WebElement element : courses) {
-                String text = element.getText();
-                if (text.contains("MAT135H1 F")) {
-                    System.out.println(text);
-                    course = element;
+            waitForDropListAppear(driver);
+
+
+            WebElement targetCourse = null;
+            while (targetCourse == null) {
+                List<WebElement> courses = driver.findElements(By.tagName("li"));
+                while (courses.size() == 0) {
+                    courses = driver.findElements(By.tagName("li"));
+                    logger.warn("cannot find " + course.getCode() + ", relocating course elements");
+                }
+
+                for (WebElement dropListItem : courses) {
+                    String dropListText = dropListItem.getText();
+                    if (dropListText.contains("MAT135H1")) {
+                        targetCourse = dropListItem;
+                        logger.info("course "+course.getCode()+" located");
+                        targetCourse.click();
+                        SeleniumUtility.waitPresence(driver, "className", "modal-body");
+                        logger.info("collecting data");
+                        String info = driver.findElement(By.className("modal-body")).getAttribute("innerText");
+                        logger.info("collected data");
+                        System.out.println(dropListText+" collected");
+                        driver.findElement(By.tagName("body")).sendKeys(Keys.ESCAPE);
+                        waitForDropListAppear(driver);
+                        driver.findElement(By.id("typeaheadInput")).click();
+//                        try {
+//                            TimeUnit.SECONDS.sleep(3);
+//                        } catch (InterruptedException e) {
+//                            e.printStackTrace();
+//                        }
+                    }
                 }
             }
+            System.out.println("test");
+            driver.findElement(By.tagName("body")).sendKeys(Keys.ESCAPE);
+        }
+        driver.quit();
+    }
+
+
+    private void waitForDropListAppear(WebDriver driver){
+        WebElement searchingBar = driver.findElement(By.id("typeaheadInput"));
+        while (searchingBar.getAttribute("class").contains("loadingIcon") || searchingBar.getAttribute("class").contains("ng-empty")) {
+        }
+        while (driver.findElement(By.cssSelector("#typeahead-search > div.ut-typeahead-container")).getAttribute("search-view-more-message").contains("Scroll down to show more results... (0 Courses found)")) {
+        }
+        while (searchingBar.getAttribute("aria-expanded").contains("false")){
+        }
+        while (driver.findElement(By.cssSelector("#typeahead-search > div.ut-typeahead-container > form > div > div > div")).getAttribute("style").contains("display: none;")){
         }
 
-        logger.info("course located");
-
-        course.click();
-        SeleniumUtility.waitPresence(driver, "className", "modal-body");
-
-        logger.info("collecting data");
-        String info = driver.findElement(By.className("modal-body")).getAttribute("innerText");
-        logger.info("collected data");
-
-        System.out.println(info);
-
-        driver.findElement(By.tagName("body")).sendKeys(Keys.ESCAPE);
-
-        driver.quit();
-
-
-//        System.out.println(courses);
-
-//driver.quit();
     }
 }

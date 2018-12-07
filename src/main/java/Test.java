@@ -9,31 +9,24 @@ public class Test {
     public static void main(String[] args) {
         try {
 
-            Course course = new Course("CSC165H1", "", "", "", "", "", "");
-
             SQLManager sqlManager = new SQLManager();
 
-//            if (!sqlManager.courseExist(course)) {
-//                System.out.println("updating data for course " + course.getCode() );
-////                sqlManager.insertCourse(course);
+//            int i = 5000000;
+//            String temp = "";
+//            for (Department department : sqlManager.getCourses()) {
+//                if (department.getSize()<=i){
+//                    i =department.getSize();
+//                    temp = department.getCourses().get(0).getDepartment();
+//                }
+//                for (Course c : department.getCourses()) {
+//                    System.out.println(c);
+//                }
 //            }
-//            else {
-//                System.out.println(("course exists"));
-//            }
+//            System.out.println(i);
+//            System.out.println(temp);
 
-            int i = 5000000;
-            String temp = "";
-            for (Department department : sqlManager.getCourses()) {
-                if (department.getSize()<=i){
-                    i =department.getSize();
-                    temp = department.getCourses().get(0).getDepartment();
-                }
-                for (Course c : department.getCourses()) {
-                    System.out.println(c);
-                }
-            }
-            System.out.println(i);
-            System.out.println(temp);
+            DataCollector dataCollector = new DataCollector(sqlManager.getCourses());
+            dataCollector.collectData();
 
         } catch (SQLException e) {
             e.printStackTrace();

@@ -22,19 +22,20 @@ public class Main {
                 totalCourse += d.getSize();
             }
             int i = 1;
+            int valid = 0;
             for (Department department : courses) {
                 for (Course course : department.getCourses()) {
                     if (!sqlManager.courseExist(course)) {
                         logger.info("updating data for course " + course.getCode() + " " + i + "/" + totalCourse);
-                        i++;
                         sqlManager.insertCourse(course);
+                        valid++;
+                    } else {
+                        logger.info("course " + course.getCode() + " exists " + i + "/" + totalCourse);
                     }
-                    else {
-                        logger.info("course exists");
-                    }
+                    i++;
                 }
             }
-            logger.info("finished updating databases");
+            logger.info("finished updating databases, " + valid + " valid new record");
 
             //return all query
 //            JSONArray results = mySQLdb.runQuery("select * from courses");
