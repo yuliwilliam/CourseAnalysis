@@ -1,5 +1,4 @@
 import org.json.JSONArray;
-
 import java.sql.SQLException;
 
 public class SQLManager {
@@ -17,13 +16,11 @@ public class SQLManager {
 
     public void insertCourse(Course course) throws SQLException {
         mySQLdb.runUpdate("insert into courses (code, courseName, credits, campus, department" +
-                ", term, division) values (" + course.generateQueryValues() + ")");
+                ", division) values (" + course.generateQueryValues() + ")");
     }
 
     public boolean courseExist(Course course) throws SQLException {
         JSONArray results = mySQLdb.runQuery("select code from courses where code='" + course.getCode().replaceAll("'", "''") + "'");
         return !results.isEmpty();
     }
-
-
 }

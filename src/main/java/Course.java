@@ -49,9 +49,9 @@ public class Course {
     }
 
     public String generateQueryValues() {
-        return String.format("'%s', '%s', '%s', '%s', '%s', '%s', '%s'",
+        return String.format("'%s', '%s', '%s', '%s', '%s', '%s'",
                 getCode().replaceAll("'", "''"), getCourseName().replaceAll("'", "''"), getCredits().replaceAll("'", "''"), getCampus().replaceAll("'", "''"),
-                getDepartment().replaceAll("'", "''"), getTerm().replaceAll("'", "''"), getDivision().replaceAll("'", "''"));
+                getDepartment().replaceAll("'", "''"), getDivision().replaceAll("'", "''"));
     }
 
     /*
