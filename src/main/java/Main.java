@@ -36,8 +36,6 @@ public class Main {
             }
             logger.info("finished updating databases");
 
-
-
             //return all query
 //            JSONArray results = mySQLdb.runQuery("select * from courses");
 //            for (Object result : results) {
