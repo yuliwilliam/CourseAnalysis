@@ -1,5 +1,9 @@
 import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SQLManager {
 
@@ -23,4 +27,22 @@ public class SQLManager {
         JSONArray results = mySQLdb.runQuery("select code from courses where code='" + course.getCode().replaceAll("'", "''") + "'");
         return !results.isEmpty();
     }
+
+    public List<Department> getCourses() throws SQLException {
+        List<Department> courses = new ArrayList<>();
+        JSONArray departmentNames = mySQLdb.runQuery("select distinct department from courses");
+        for (Object departmentName : departmentNames) {
+            String name = ((JSONObject)departmentName).getString("department").replaceAll("'","''");
+            JSONArray courseUnderDepartment = mySQLdb.runQuery("select * from courses where department='" + name + "'");
+            Department department = new Department();
+            for (Object course : courseUnderDepartment) {
+                JSONObject temp = (JSONObject) course;
+                department.addCourse(new Course(temp.getString("code"), temp.getString("courseName"), temp.getString("credits"), temp.getString("campus"), temp.getString("department"), temp.getString("division")));
+            }
+            courses.add(department);
+        }
+        return courses;
+    }
+
 }
+

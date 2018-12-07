@@ -18,7 +18,7 @@ public class CourseCollector {
 
     private final static int numOfThread = 5;
 
-    private List<Division> courses;
+    private List<Department> courses;
 
     public CourseCollector() {
         courses = new ArrayList<>();
@@ -31,26 +31,26 @@ public class CourseCollector {
 
 
         WebElement table = driver.findElement(By.id("u208_boxLayout"));
-        List<WebElement> divisions = new ArrayList<>();
+        List<WebElement> departments = new ArrayList<>();
 
         for (WebElement d : table.findElements(By.className("uif-link"))) {
             if (!d.getText().equals("")) {
-                divisions.add(d);
+                departments.add(d);
             }
         }
-        logger.info("collected all " + divisions.size() + " divisions of courses");
+        logger.info("collected all " + departments.size() + " departments of courses");
         List<Thread> threads = new ArrayList<>();
 
-        for (int i = 0; i < divisions.size(); i++) {
+        for (int i = 0; i < departments.size(); i++) {
             final int index = i;
             Thread temp = new Thread(() -> {
-                logger.info("collecting category " + (index + 1) + "/" + divisions.size() + " - " + divisions.get(index).getText() + " courses");
+                logger.info("collecting category " + (index + 1) + "/" + departments.size() + " - " + departments.get(index).getText() + " courses");
                 WebDriver subDriver = SeleniumUtility.initWebDriver();
                 subDriver.get(driver.getCurrentUrl());
-                subDriver.findElement(By.id(divisions.get(index).getAttribute("id"))).click();
+                subDriver.findElement(By.id(departments.get(index).getAttribute("id"))).click();
                 courses.add(collectCourseInCategory(subDriver));
                 subDriver.quit();
-                logger.info("collected category " + divisions.get(index).getText() + " courses");
+                logger.info("collected category " + departments.get(index).getText() + " courses");
             });
             threads.add(temp);
         }
@@ -77,26 +77,26 @@ public class CourseCollector {
         }
 
         int totalCourse = 0;
-        for (Division d : courses) {
+        for (Department d : courses) {
             totalCourse += d.getSize();
         }
 
-        logger.info("collected all " + courses.size() + " divisions " + totalCourse + " courses");
+        logger.info("collected all " + courses.size() + " departments " + totalCourse + " courses");
 //        writeToTxt();
         driver.quit();
     }
 
-    private Division collectCourseInCategory(WebDriver driver) {
+    private Department collectCourseInCategory(WebDriver driver) {
         SeleniumUtility.waitVisible(driver, "id", "courseSearchResults_info");
         new Select(driver.findElement(By.name("courseSearchResults_length"))).selectByValue("100");
         SeleniumUtility.waitVisible(driver, "id", "courseSearchResults_info");
-        Division division = new Division();
+        Department department = new Department();
         while (!driver.findElement(By.id("courseSearchResults_next")).getAttribute("class").contains("disabled")) {
 
             List<WebElement> displayedCourse = driver.findElement(By.cssSelector("#courseSearchResults > tbody")).findElements(By.tagName("tr"));
             for (WebElement course : displayedCourse) {
                 List<WebElement> fields = course.findElements(By.tagName("td"));
-                division.addCourse(new Course(fields.get(1).getText(), fields.get(2).getText(), fields.get(3).getText(), fields.get(4).getText(), fields.get(5).getText(), fields.get(6).getText(), fields.get(7).getText()));
+                department.addCourse(new Course(fields.get(1).getText(), fields.get(2).getText(), fields.get(3).getText(), fields.get(4).getText(), fields.get(5).getText(), fields.get(6).getText(), fields.get(7).getText()));
             }
             driver.findElement(By.id("courseSearchResults_next")).click();
             SeleniumUtility.waitVisible(driver, "id", "courseSearchResults_info");
@@ -104,17 +104,17 @@ public class CourseCollector {
         //end case, courses on the last page
         for (WebElement course : driver.findElement(By.cssSelector("#courseSearchResults > tbody")).findElements(By.tagName("tr"))) {
             List<WebElement> fields = course.findElements(By.tagName("td"));
-            division.addCourse(new Course(fields.get(1).getText(), fields.get(2).getText(), fields.get(3).getText(), fields.get(4).getText(), fields.get(5).getText(), fields.get(6).getText(), fields.get(7).getText()));
+            department.addCourse(new Course(fields.get(1).getText(), fields.get(2).getText(), fields.get(3).getText(), fields.get(4).getText(), fields.get(5).getText(), fields.get(6).getText(), fields.get(7).getText()));
         }
-        return division;
+        return department;
     }
 
 
     private void writeToTxt() {
         try {
             PrintWriter writer = new PrintWriter("courses.txt", "UTF-8");
-            for (Division division : courses) {
-                for (Course course : division.getCourses()) {
+            for (Department department : courses) {
+                for (Course course : department.getCourses()) {
                     writer.println(course);
                 }
             }
@@ -126,7 +126,7 @@ public class CourseCollector {
 
     }
 
-    public List<Division> getCourses() {
+    public List<Department> getCourses() {
         return courses;
     }
 }

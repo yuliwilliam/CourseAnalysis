@@ -60,7 +60,7 @@ public class MySQLdb {
         try {
             connect();
             PreparedStatement statement = connection.prepareStatement(query);
-             statement.executeUpdate();
+            statement.executeUpdate();
         } finally {
             disconnect();
         }
