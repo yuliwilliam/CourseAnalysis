@@ -2,6 +2,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class Test {
 
@@ -26,7 +27,11 @@ public class Test {
 //            System.out.println(temp);
 
             DataCollector dataCollector = new DataCollector(sqlManager.getCourses());
-            dataCollector.collectData();
+            List<TimeStamp> timeStamps = dataCollector.collectData();
+
+            for (TimeStamp t:timeStamps){
+                System.out.println(t);
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();
