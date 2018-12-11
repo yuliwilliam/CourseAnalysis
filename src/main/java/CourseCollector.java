@@ -49,13 +49,13 @@ public class CourseCollector {
             final int index = i;
             //init a individual driver for each thread
             Thread temp = new Thread(() -> {
-                logger.info("collecting category " + (index + 1) + "/" + departments.size() + " - " + departments.get(index).getText() + " courses");
+                logger.info("collecting department " + (index + 1) + "/" + departments.size() + " - " + departments.get(index).getText() + " courses");
                 WebDriver subDriver = SeleniumUtility.initWebDriver();
                 subDriver.get(driver.getCurrentUrl());
                 subDriver.findElement(By.id(departments.get(index).getAttribute("id"))).click();
                 courses.add(collectCoursesFromDepartment(subDriver));
                 subDriver.quit();
-                logger.info("collected category " + departments.get(index).getText() + " courses");
+                logger.info("collected department " + departments.get(index).getText() + " courses");
             });
             threads.add(temp);
         }

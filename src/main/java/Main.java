@@ -26,8 +26,8 @@ public class Main {
             for (Department department : courses) {
                 for (Course course : department.getCourses()) {
                     if (!sqlManager.courseExist(course)) {
-                        logger.info("updating data for course " + course.getCode() + " " + i + "/" + totalCourse);
                         sqlManager.insertCourse(course);
+                        logger.info("updated data for course " + course.getCode() + " " + i + "/" + totalCourse);
                         valid++;
                     } else {
                         logger.info("course " + course.getCode() + " exists " + i + "/" + totalCourse);
@@ -35,7 +35,7 @@ public class Main {
                     i++;
                 }
             }
-            logger.info("finished updating databases, " + valid + " valid new record");
+            logger.info("finished updating databases, " + valid + " valid new courses, " + (totalCourse - valid) + " courses already exists in database");
 
             //return all query
 //            JSONArray results = mySQLdb.runQuery("select * from courses");
