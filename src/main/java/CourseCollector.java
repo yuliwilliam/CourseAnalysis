@@ -105,7 +105,7 @@ public class CourseCollector {
             //save each course' info as a class Course
             for (WebElement course : displayedCourse) {
                 List<WebElement> fields = course.findElements(By.tagName("td"));
-                department.addCourse(new Course(fields.get(1).getText(), fields.get(2).getText(), fields.get(3).getText(), fields.get(4).getText(), fields.get(5).getText(), fields.get(6).getText(), fields.get(7).getText()));
+                department.addCourse(new Course(fields.get(1).getText(), fields.get(2).getText(), fields.get(3).getText(), fields.get(4).getText(), fields.get(5).getText(), fields.get(6).getText(), fields.get(7).getText(), fields.get(1).findElement(By.tagName("a")).getAttribute("href")));
             }
             //click next page button and wait till page loaded
             driver.findElement(By.id("courseSearchResults_next")).click();
@@ -114,7 +114,7 @@ public class CourseCollector {
         //end case, courses on the last page
         for (WebElement course : driver.findElement(By.cssSelector("#courseSearchResults > tbody")).findElements(By.tagName("tr"))) {
             List<WebElement> fields = course.findElements(By.tagName("td"));
-            department.addCourse(new Course(fields.get(1).getText(), fields.get(2).getText(), fields.get(3).getText(), fields.get(4).getText(), fields.get(5).getText(), fields.get(6).getText(), fields.get(7).getText()));
+            department.addCourse(new Course(fields.get(1).getText(), fields.get(2).getText(), fields.get(3).getText(), fields.get(4).getText(), fields.get(5).getText(), fields.get(6).getText(), fields.get(7).getText(), fields.get(1).findElement(By.tagName("a")).getAttribute("href")));
         }
         return department;
     }

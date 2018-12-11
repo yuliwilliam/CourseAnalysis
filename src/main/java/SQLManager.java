@@ -20,11 +20,11 @@ public class SQLManager {
 
     public void insertCourse(Course course) throws SQLException {
         mySQLdb.runUpdate("insert into courses (code, courseName, credits, campus, department" +
-                ", division) values (" + course.generateQueryValues() + ")");
+                ",term, division, url) values (" + course.generateQueryValues() + ")");
     }
 
     public boolean courseExist(Course course) throws SQLException {
-        JSONArray results = mySQLdb.runQuery("select code from courses where code='" + course.getCode().replaceAll("'", "''") + "'");
+        JSONArray results = mySQLdb.runQuery("select code from courses where code='" + course.getCode().replaceAll("'", "''") + "' and term='" + course.getTerm().replaceAll("'", "''") + "'" + "' and url='" + course.getUrl().replaceAll("'", "''") + "'");
         return !results.isEmpty();
     }
 
@@ -32,7 +32,7 @@ public class SQLManager {
         List<Department> courses = new ArrayList<>();
         JSONArray departmentNames = mySQLdb.runQuery("select distinct department from courses");
         for (Object departmentName : departmentNames) {
-            String name = ((JSONObject)departmentName).getString("department").replaceAll("'","''");
+            String name = ((JSONObject) departmentName).getString("department").replaceAll("'", "''");
             JSONArray courseUnderDepartment = mySQLdb.runQuery("select * from courses where department='" + name + "'");
             Department department = new Department();
             for (Object course : courseUnderDepartment) {

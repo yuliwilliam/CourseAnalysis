@@ -9,8 +9,9 @@ public class Course {
     private String department;
     private String term;
     private String division;
+    private String url;
 
-    public Course(String code, String courseName, String credits, String campus, String department, String term, String division) {
+    public Course(String code, String courseName, String credits, String campus, String department, String term, String division, String url) {
         this.code = code;
         this.courseName = courseName;
         this.credits = credits;
@@ -18,6 +19,7 @@ public class Course {
         this.department = department;
         this.term = term;
         this.division = division;
+        this.url = url;
     }
 
     public Course(String code, String courseName, String credits, String campus, String department, String division) {
@@ -57,15 +59,16 @@ public class Course {
         return division;
     }
 
-    public String generateQueryValues() {
-        return String.format("'%s', '%s', '%s', '%s', '%s', '%s'",
-                getCode().replaceAll("'", "''"), getCourseName().replaceAll("'", "''"), getCredits().replaceAll("'", "''"), getCampus().replaceAll("'", "''"),
-                getDepartment().replaceAll("'", "''"), getDivision().replaceAll("'", "''"));
+    public String getUrl() {
+        return url;
     }
 
-    /*
-    course in different term consider same course
-     */
+    public String generateQueryValues() {
+        return String.format("'%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s'",
+                getCode().replaceAll("'", "''"), getCourseName().replaceAll("'", "''"), getCredits().replaceAll("'", "''"), getCampus().replaceAll("'", "''"),
+                getDepartment().replaceAll("'", "''"), getTerm().replaceAll("'", "''"), getDivision().replaceAll("'", "''"), getUrl().replaceAll("'", "''"));
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -76,7 +79,9 @@ public class Course {
                 Objects.equals(credits, course.credits) &&
                 Objects.equals(campus, course.campus) &&
                 Objects.equals(department, course.department) &&
-                Objects.equals(division, course.division);
+                Objects.equals(term, course.term) &&
+                Objects.equals(division, course.division) &&
+                Objects.equals(url, course.url);
     }
 
 
