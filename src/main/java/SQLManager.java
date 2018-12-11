@@ -24,7 +24,7 @@ public class SQLManager {
     }
 
     public boolean courseExist(Course course) throws SQLException {
-        JSONArray results = mySQLdb.runQuery("select code from courses where code='" + course.getCode().replaceAll("'", "''") + "' and term='" + course.getTerm().replaceAll("'", "''") + "'" + "' and url='" + course.getUrl().replaceAll("'", "''") + "'");
+        JSONArray results = mySQLdb.runQuery("select code from courses where code='" + course.getCode().replaceAll("'", "''") + "' and term='" + course.getTerm().replaceAll("'", "''") + "' and url='" + course.getUrl().replaceAll("'", "''") + "'");
         return !results.isEmpty();
     }
 
