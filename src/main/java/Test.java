@@ -27,8 +27,8 @@ public class Test {
             dataCollector.collectData();
             List<TimeStamp> timeStamps = dataCollector.getTimeStamps();
 
-            for (TimeStamp t:timeStamps){
-                System.out.println(t);
+            for (TimeStamp timeStamp:timeStamps){
+                sqlManager.insertTimeStamp(timeStamp);
             }
 
         } catch (SQLException e) {

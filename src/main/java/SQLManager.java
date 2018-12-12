@@ -23,6 +23,11 @@ public class SQLManager {
                 ",term, division, url) values (" + course.generateQueryValues() + ")");
     }
 
+    public void insertTimeStamp(TimeStamp timeStamp) throws SQLException {
+        mySQLdb.runUpdate("insert into timeStamps (code, term, dataTime, currentEnrolment, courseSize" +
+                ",section, location, lectureTime, instructor) values (" + timeStamp.generateQueryValues() + ")");
+    }
+
     public boolean courseExist(Course course) throws SQLException {
         JSONArray results = mySQLdb.runQuery("select code from courses where code='" + course.getCode().replaceAll("'", "''") + "' and term='" + course.getTerm().replaceAll("'", "''") + "' and url='" + course.getUrl().replaceAll("'", "''") + "'");
         return !results.isEmpty();

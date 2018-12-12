@@ -1,6 +1,7 @@
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -31,7 +32,7 @@ public class DataCollector {
         int index = 1;
 
         for (Department department : courses) {
-            if (department.getDepartmentName().contains("ASDN")) {
+            if (department.getDepartmentName().contains("Computer Science")) {
                 Thread temp = new Thread(() -> {
 
                     logger.info("collecting department " + index + "/" + courses.size() + " - " + department.getDepartmentName() + " courses");
@@ -74,19 +75,32 @@ public class DataCollector {
 
         WebDriver driver = SeleniumUtility.initWebDriver();
 
+        int count = 1;
+        int invalid = 1;
+        int timeStampCount = 0;
+        int size = department.getCourses().size();
         for (Course course : department.getCourses()) {
+
+//            logger.info("collecting information for course " + course.getCode() + " " + course.getTerm());
+
             driver.get(course.getUrl());
             SeleniumUtility.waitPresence(driver, "id", "correctPage");
 
-            List<WebElement> sections = driver.findElement(By.className("dataTables_wrapper")).findElements(By.tagName("tr"));
+            List<WebElement> sections = new ArrayList<>();
+
+            try {
+                sections = driver.findElement(By.className("dataTables_wrapper")).findElements(By.tagName("tr"));
+            } catch (NoSuchElementException e) {
+                invalid++;
+                logger.info("course information for " + course.getCode() + " " + course.getTerm() + " not available");
+            }
 
             for (WebElement section : sections) {
 
                 //filter out not useful section
-                if (section.getAttribute("class").equalsIgnoreCase("odd")||section.getAttribute("class").equalsIgnoreCase("even")) {
+                if (section.getAttribute("class").equalsIgnoreCase("odd") || section.getAttribute("class").equalsIgnoreCase("even")) {
 
                     List<WebElement> fields = section.findElements(By.tagName("td"));
-
 
                     String sectionName = fields.get(0).getText();
                     String lectureTime = fields.get(1).getText();
@@ -97,13 +111,17 @@ public class DataCollector {
                     String optionToWaitlist = fields.get(6).getText();
                     String deliveryMode = fields.get(7).getText();
 
-                    timeStamps.add(new TimeStamp(course.getCode(),course.getTerm(), currentEnrolment, courseSize, sectionName, location, lectureTime, instructor));
+                    timeStamps.add(new TimeStamp(course.getCode(), course.getTerm(), currentEnrolment, courseSize, sectionName, location, lectureTime, instructor));
+                    timeStampCount++;
                 }
 
             }
 
+            logger.info("collected information course " + count + "/" + size + " - " + course.getCode() + " " + course.getTerm());
+            count++;
         }
         driver.quit();
+        logger.info("collect " + timeStampCount + " timestamps, " + (size - invalid) + " courses information available, " + invalid + " courses information not available");
 
     }
 

@@ -25,7 +25,7 @@ public class MySQLdb {
     private void connect() throws SQLException {
         connection = DriverManager.getConnection(HOST, USERNAME, PASSWORD);
         if (!connection.isClosed()) {
-            logger.info("connected to database");
+            logger.trace("connected to database");
         } else {
             logger.error("unable to connect to database");
             throw new RuntimeException("failed to connect to database with host: " + HOST + " username: " + USERNAME + " password: " + PASSWORD);
@@ -37,16 +37,16 @@ public class MySQLdb {
             connection.close();
         }
         if (connection.isClosed()) {
-            logger.info("disconnected to database");
+            logger.trace("disconnected to database");
         } else {
             throw new RuntimeException("failed to disconnect from database with host: " + HOST + " username: " + USERNAME + " password: " + PASSWORD);
         }
     }
 
     public JSONArray runQuery(String query) throws SQLException {
-        logger.info("Query = " + query);
         try {
             connect();
+            logger.trace("Query = " + query);
             PreparedStatement statement = connection.prepareStatement(query);
             return convert(statement.executeQuery());
         } finally {
@@ -55,9 +55,9 @@ public class MySQLdb {
     }
 
     public void runUpdate(String query) throws SQLException {
-        logger.info("Query = " + query);
         try {
             connect();
+            logger.trace("Query = " + query);
             PreparedStatement statement = connection.prepareStatement(query);
             statement.executeUpdate();
         } finally {
