@@ -30,6 +30,7 @@ public class SQLManager {
 
     public List<Department> getCourses() throws SQLException {
         List<Department> courses = new ArrayList<>();
+        //arrange courses by department
         JSONArray departmentNames = mySQLdb.runQuery("select distinct department from courses");
         for (Object departmentName : departmentNames) {
             String name = ((JSONObject) departmentName).getString("department").replaceAll("'", "''");
@@ -37,7 +38,7 @@ public class SQLManager {
             Department department = new Department();
             for (Object course : courseUnderDepartment) {
                 JSONObject temp = (JSONObject) course;
-                department.addCourse(new Course(temp.getString("code"), temp.getString("courseName"), temp.getString("credits"), temp.getString("campus"), temp.getString("department"), temp.getString("division")));
+                department.addCourse(new Course(temp.getString("code"), temp.getString("courseName"), temp.getString("credits"), temp.getString("campus"), temp.getString("department"),temp.getString("term"), temp.getString("division"), temp.getString("url")));
             }
             courses.add(department);
         }

@@ -47,7 +47,7 @@ public class Main {
             e.printStackTrace();
         }
 
-//        DataCollector dataCollector = new DataCollector();
+//        AcornDataCollector dataCollector = new AcornDataCollector();
 //        dataCollector.collectData();
 
     }

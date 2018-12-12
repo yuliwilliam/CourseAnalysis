@@ -22,14 +22,7 @@ public class Course {
         this.url = url;
     }
 
-    public Course(String code, String courseName, String credits, String campus, String department, String division) {
-        this.code = code;
-        this.courseName = courseName;
-        this.credits = credits;
-        this.campus = campus;
-        this.department = department;
-        this.division = division;
-    }
+
 
     public String getCode() {
         return code;

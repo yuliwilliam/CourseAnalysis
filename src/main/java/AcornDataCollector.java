@@ -11,8 +11,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class DataCollector {
-    private final static Logger logger = LogManager.getLogger(DataCollector.class.getName());
+public class AcornDataCollector {
+    private final static Logger logger = LogManager.getLogger(AcornDataCollector.class.getName());
     private final String USERNAME = "";
     private final String PASSWORD = "";
 
@@ -20,7 +20,7 @@ public class DataCollector {
 
     private List<Department> courses;
 
-    public DataCollector(List<Department> courses) {
+    public AcornDataCollector(List<Department> courses) {
         this.courses = courses;
     }
 

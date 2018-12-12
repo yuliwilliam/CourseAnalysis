@@ -1,6 +1,3 @@
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.sql.SQLException;
 import java.util.List;
 
@@ -26,8 +23,8 @@ public class Test {
 //            System.out.println(i);
 //            System.out.println(temp);
 
-            DataCollector dataCollector = new DataCollector(sqlManager.getCourses());
-            List<TimeStamp> timeStamps = dataCollector.collectData();
+            AcornDataCollector acornDataCollector = new AcornDataCollector(sqlManager.getCourses());
+            List<TimeStamp> timeStamps = acornDataCollector.collectData();
 
             for (TimeStamp t:timeStamps){
                 System.out.println(t);
