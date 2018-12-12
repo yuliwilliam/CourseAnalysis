@@ -35,7 +35,7 @@ public class SQLManager {
         for (Object departmentName : departmentNames) {
             String name = ((JSONObject) departmentName).getString("department").replaceAll("'", "''");
             JSONArray courseUnderDepartment = mySQLdb.runQuery("select * from courses where department='" + name + "'");
-            Department department = new Department();
+            Department department = new Department(name);
             for (Object course : courseUnderDepartment) {
                 JSONObject temp = (JSONObject) course;
                 department.addCourse(new Course(temp.getString("code"), temp.getString("courseName"), temp.getString("credits"), temp.getString("campus"), temp.getString("department"),temp.getString("term"), temp.getString("division"), temp.getString("url")));

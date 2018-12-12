@@ -4,9 +4,15 @@ import java.util.List;
 public class Department {
 
     private List<Course> courses;
+    private String departmentName;
 
-    public Department() {
+    public String getDepartmentName() {
+        return departmentName;
+    }
+
+    public Department(String departmentName) {
         this.courses = new ArrayList<>();
+        this.departmentName = departmentName;
     }
 
     public void addCourse(Course course) {

@@ -49,13 +49,16 @@ public class CourseCollector {
             final int index = i;
             //init a individual driver for each thread
             Thread temp = new Thread(() -> {
-                logger.info("collecting department " + (index + 1) + "/" + departments.size() + " - " + departments.get(index).getText() + " courses");
+                String departmentName = departments.get(index).getText();
+                logger.info("collecting department " + (index + 1) + "/" + departments.size() + " - " + departmentName + " courses");
+                Department department = new Department(departmentName);
                 WebDriver subDriver = SeleniumUtility.initWebDriver();
                 subDriver.get(driver.getCurrentUrl());
                 subDriver.findElement(By.id(departments.get(index).getAttribute("id"))).click();
-                courses.add(collectCoursesFromDepartment(subDriver));
+                collectCoursesFromDepartment(subDriver, department);
                 subDriver.quit();
-                logger.info("collected department " + departments.get(index).getText() + " courses");
+                logger.info("collected department " + departmentName + " courses");
+
             });
             threads.add(temp);
         }
@@ -94,11 +97,10 @@ public class CourseCollector {
     /*
     collect all courses from a department
      */
-    private Department collectCoursesFromDepartment(WebDriver driver) {
+    private void collectCoursesFromDepartment(WebDriver driver, Department department) {
         SeleniumUtility.waitVisible(driver, "id", "courseSearchResults_info");
         new Select(driver.findElement(By.name("courseSearchResults_length"))).selectByValue("100");
         SeleniumUtility.waitVisible(driver, "id", "courseSearchResults_info");
-        Department department = new Department();
         //browser through all pages until next page button is not available
         while (!driver.findElement(By.id("courseSearchResults_next")).getAttribute("class").contains("disabled")) {
             List<WebElement> displayedCourse = driver.findElement(By.cssSelector("#courseSearchResults > tbody")).findElements(By.tagName("tr"));
@@ -116,7 +118,7 @@ public class CourseCollector {
             List<WebElement> fields = course.findElements(By.tagName("td"));
             department.addCourse(new Course(fields.get(1).getText(), fields.get(2).getText(), fields.get(3).getText(), fields.get(4).getText(), fields.get(5).getText(), fields.get(6).getText(), fields.get(7).getText(), fields.get(1).findElement(By.tagName("a")).getAttribute("href")));
         }
-        return department;
+        courses.add( department);
     }
 
 

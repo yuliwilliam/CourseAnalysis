@@ -23,8 +23,9 @@ public class Test {
 //            System.out.println(i);
 //            System.out.println(temp);
 
-            AcornDataCollector acornDataCollector = new AcornDataCollector(sqlManager.getCourses());
-            List<TimeStamp> timeStamps = acornDataCollector.collectData();
+            DataCollector dataCollector = new DataCollector(sqlManager.getCourses());
+            dataCollector.collectData();
+            List<TimeStamp> timeStamps = dataCollector.getTimeStamps();
 
             for (TimeStamp t:timeStamps){
                 System.out.println(t);
