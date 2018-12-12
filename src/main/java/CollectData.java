@@ -23,7 +23,10 @@ public class CollectData {
 //            System.out.println(i);
 //            System.out.println(temp);
 
-            DataCollector dataCollector = new DataCollector(sqlManager.getCourses());
+            //options: getCourses(), getCurrentYearCourses(), getCurrentSemesterCourses()
+            List<Department> courses = sqlManager.getCourses();
+
+            DataCollector dataCollector = new DataCollector(courses);
             dataCollector.collectData();
             List<TimeStamp> timeStamps = dataCollector.getTimeStamps();
 
