@@ -29,20 +29,21 @@ public class DataCollector {
 
         List<Thread> threads = new ArrayList<>();
 
-        int index = 1;
+        int i = 1;
 
         for (Department department : courses) {
-            if (department.getDepartmentName().contains("Computer Science")) {
-                Thread temp = new Thread(() -> {
-
-                    logger.info("collecting department " + index + "/" + courses.size() + " - " + department.getDepartmentName() + " courses");
+//            if (department.getDepartmentName().contains("Computer Science")) {
+            int index = i;
+            Thread temp = new Thread(() -> {
+                logger.info("collecting department " + index + "/" + courses.size() + " - " + department.getDepartmentName() + " courses");
 //                timeStamps.add(collectCoursesFromDepartment(subDriver));
-                    collectDataOfCourse(department);
-                    logger.info("collected department " + department.getDepartmentName() + " courses");
+                collectDataOfCourse(department);
+                logger.info("collected department " + department.getDepartmentName() + " courses");
 
-                });
-                threads.add(temp);
-            }
+            });
+            threads.add(temp);
+//            }
+            i++;
         }
 
 
