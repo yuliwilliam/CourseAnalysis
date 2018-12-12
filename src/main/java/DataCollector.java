@@ -15,7 +15,7 @@ public class DataCollector {
 
     private final static Logger logger = LogManager.getLogger(DataCollector.class.getName());
 
-    private final static int numOfThread = 5;
+    private final static int numOfThread = 10;
 
     private List<Department> courses;
     private List<TimeStamp> timeStamps;

@@ -1,8 +1,12 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.sql.SQLException;
 import java.util.List;
 
 public class CollectData {
 
+    private final static Logger logger = LogManager.getLogger(CollectData.class.getName());
 
     public static void main(String[] args) {
         try {
@@ -30,8 +34,12 @@ public class CollectData {
             dataCollector.collectData();
             List<TimeStamp> timeStamps = dataCollector.getTimeStamps();
 
-            for (TimeStamp timeStamp:timeStamps){
+            int i = 1;
+            int size = timeStamps.size();
+            for (TimeStamp timeStamp : timeStamps) {
                 sqlManager.insertTimeStamp(timeStamp);
+                logger.info("updated timestamp " + i + "/" + size + " - " + timeStamp.getCode());
+                i++;
             }
 
         } catch (SQLException e) {
