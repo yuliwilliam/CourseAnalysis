@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d952eb89-2e5f-4aa8-9270-80e4a624afdf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataCollector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MySQLdb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MySQLdb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SQLManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SQLManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TimeStamp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TimeStamp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/LOG4J2.XML" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LOG4J2.XML" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataCollector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataCollector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/LOG4J2.XML" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LOG4J2.XML" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MySQLdb.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MySQLdb.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SQLManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SQLManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/TimeStamp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TimeStamp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CollectCourse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CollectData.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -119,6 +107,18 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CollectCourse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/LOG4J2.XML">
           <provider selected="true" editor-type-id="text-editor">
@@ -140,13 +140,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DataCollector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="150">
+              <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#4800#4801#0" expanded="true" />
               </folding>
             </state>
@@ -154,10 +153,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Test.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CollectData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+            <state relative-caret-position="45">
+              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -205,18 +204,20 @@
         <option value="$PROJECT_DIR$/src/main/java/Division.java" />
         <option value="$PROJECT_DIR$/src/main/java/testtest.java" />
         <option value="$PROJECT_DIR$/src/main/java/t.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/AcornDataCollector.java" />
         <option value="$PROJECT_DIR$/src/main/java/CourseCollector.java" />
         <option value="$PROJECT_DIR$/src/main/java/Department.java" />
         <option value="$PROJECT_DIR$/src/main/java/SeleniumUtility.java" />
         <option value="$PROJECT_DIR$/src/main/java/SQLManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/Course.java" />
         <option value="$PROJECT_DIR$/src/main/java/TimeStamp.java" />
         <option value="$PROJECT_DIR$/src/main/java/MySQLdb.java" />
         <option value="$PROJECT_DIR$/src/main/resources/LOG4J2.XML" />
         <option value="$PROJECT_DIR$/src/main/java/DataCollector.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CollectData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CollectCourse.java" />
       </list>
     </option>
   </component>
@@ -283,7 +284,7 @@
     <property name="SearchEverywhereHistoryKey" value="javadoc&#9;ACTION&#9;GenerateJavadoc&#10;database&#9;ACTION&#9;ActivateDatabaseToolWindow" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544589520290" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544589614793" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -315,16 +316,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+  <component name="RunManager" selected="Application.CollectData">
+    <configuration name="CollectCourse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CollectCourse" />
       <module name="CourseAnalysis" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test" />
+    <configuration name="CollectData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CollectData" />
       <module name="CourseAnalysis" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -352,16 +353,16 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.CollectCourse" />
       <item itemvalue="Application.ZhiHu3" />
-      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.CollectData" />
       <item itemvalue="Application.testtest" />
       <item itemvalue="Application.t" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.CollectData" />
+        <item itemvalue="Application.CollectCourse" />
         <item itemvalue="Application.t" />
         <item itemvalue="Application.testtest" />
         <item itemvalue="Application.ZhiHu3" />
@@ -392,12 +393,12 @@
       <workItem from="1544155113920" duration="14899000" />
       <workItem from="1544496933674" duration="5728000" />
       <workItem from="1544567555605" duration="1566000" />
-      <workItem from="1544580996633" duration="8366000" />
+      <workItem from="1544580996633" duration="8510000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84988000" />
+    <option name="totallyTimeSpent" value="85132000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -421,14 +422,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2912088" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2912088" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997253" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32554945" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32554945" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32967034" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
@@ -513,16 +514,6 @@
     <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.13/mysql-connector-java-8.0.13.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-230">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/AcornDataCollector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -552,16 +543,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="29" column="49" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -645,11 +626,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DataCollector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="150">
+          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding>
+            <element signature="e#4800#4801#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CollectData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4800#4801#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CollectCourse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

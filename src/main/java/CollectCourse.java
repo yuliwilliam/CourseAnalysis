@@ -4,9 +4,9 @@ import org.apache.logging.log4j.Logger;
 import java.sql.SQLException;
 import java.util.List;
 
-public class Main {
+public class CollectCourse {
 
-    private final static Logger logger = LogManager.getLogger(Main.class.getName());
+    private final static Logger logger = LogManager.getLogger(CollectCourse.class.getName());
 
     public static void main(String[] args) {
 

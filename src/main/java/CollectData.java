@@ -1,7 +1,7 @@
 import java.sql.SQLException;
 import java.util.List;
 
-public class Test {
+public class CollectData {
 
 
     public static void main(String[] args) {
