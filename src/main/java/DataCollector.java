@@ -1,10 +1,15 @@
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -15,7 +20,7 @@ public class DataCollector {
 
     private final static Logger logger = LogManager.getLogger(DataCollector.class.getName());
 
-    private final static int numOfThread = 10;
+    private final static int numOfThread = 20;
 
     private List<Department> courses;
     private List<TimeStamp> timeStamps;
@@ -32,17 +37,22 @@ public class DataCollector {
         int i = 1;
 
         for (Department department : courses) {
-//            if (department.getDepartmentName().contains("Computer Science")) {
             int index = i;
             Thread temp = new Thread(() -> {
                 logger.info("collecting department " + index + "/" + courses.size() + " - " + department.getDepartmentName() + " courses");
-//                timeStamps.add(collectCoursesFromDepartment(subDriver));
-                collectDataOfCourse(department);
+
+//                collectDataOfCourse(department);
+
+                try {
+                    collectDataOfCourseByHTTP(department);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
                 logger.info("collected department " + department.getDepartmentName() + " courses");
 
             });
             threads.add(temp);
-//            }
             i++;
         }
 
@@ -126,7 +136,40 @@ public class DataCollector {
 
     }
 
+
+    public void collectDataOfCourseByHTTP(Department department) throws IOException {
+
+        int timeStampCount = 0;
+
+        for (Course course : department.getCourses()) {
+
+            Document document = Jsoup.connect(course.getUrl()).get();
+
+            Elements table = document.select("#u172 > tbody > tr");
+
+            for (Element section : table) {
+                Elements fields = section.select("td");
+                String sectionName = fields.get(0).text();
+                String lectureTime = fields.get(1).text();
+                String instructor = fields.get(2).text();
+                String location = fields.get(3).text();
+                String courseSize = fields.get(4).text();
+                String currentEnrolment = fields.get(5).text();
+                String optionToWaitlist = fields.get(6).text();
+                String deliveryMode = fields.get(7).text();
+
+                timeStamps.add(new TimeStamp(course.getCode(), course.getTerm(), currentEnrolment, courseSize, sectionName, location, lectureTime, instructor));
+                timeStampCount++;
+
+            }
+        }
+        logger.info("collect " + timeStampCount + " timestamps");
+    }
+
+
     public List<TimeStamp> getTimeStamps() {
         return timeStamps;
     }
+
+
 }

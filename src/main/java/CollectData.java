@@ -34,6 +34,8 @@ public class CollectData {
             dataCollector.collectData();
             List<TimeStamp> timeStamps = dataCollector.getTimeStamps();
 
+            System.out.println(timeStamps.size());
+
             int i = 1;
             int size = timeStamps.size();
             for (TimeStamp timeStamp : timeStamps) {

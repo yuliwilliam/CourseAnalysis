@@ -39,11 +39,11 @@ public class SQLManager {
     public List<Department> getCourses() throws SQLException {
         List<Department> courses = new ArrayList<>();
         //arrange courses by department
-        JSONArray departmentNames = mySQLdb.runQuery("distinct department, division from courses");
+        JSONArray departmentNames = mySQLdb.runQuery("select distinct department, division from courses");
         for (Object departmentName : departmentNames) {
             String name = ((JSONObject) departmentName).getString("department");
             String division = ((JSONObject) departmentName).getString("division");
-            JSONArray courseUnderDepartment = mySQLdb.runQuery(String.format("select * from courses where department='%s' and division='%s'", name, division));
+            JSONArray courseUnderDepartment = mySQLdb.runQuery(String.format("select * from courses where department='%s' and division='%s'", name.replaceAll("'","''"), division.replaceAll("'","''")));
             Department department = new Department(name);
             for (Object course : courseUnderDepartment) {
                 JSONObject temp = (JSONObject) course;
@@ -81,11 +81,11 @@ public class SQLManager {
 
         List<Department> courses = new ArrayList<>();
         //arrange courses by department
-        JSONArray departmentNames = mySQLdb.runQuery("distinct department, division from courses");
+        JSONArray departmentNames = mySQLdb.runQuery("select distinct department, division from courses");
         for (Object departmentName : departmentNames) {
             String name = ((JSONObject) departmentName).getString("department");
             String division = ((JSONObject) departmentName).getString("division");
-            JSONArray courseUnderDepartment = mySQLdb.runQuery(String.format("select * from courses where department='%s' and division='%s' and (term='%s' or term='%s' or term='%s')", name, division, term1, term2, term3));
+            JSONArray courseUnderDepartment = mySQLdb.runQuery(String.format("select * from courses where department='%s' and division='%s' and (term='%s' or term='%s' or term='%s')", name.replaceAll("'","''"), division.replaceAll("'","''"), term1.replaceAll("'","''"), term2.replaceAll("'","''"), term3.replaceAll("'","''")));
             Department department = new Department(name);
             for (Object course : courseUnderDepartment) {
                 JSONObject temp = (JSONObject) course;
@@ -121,11 +121,11 @@ public class SQLManager {
 
         List<Department> courses = new ArrayList<>();
         //arrange courses by department
-        JSONArray departmentNames = mySQLdb.runQuery("distinct department, division from courses");
+        JSONArray departmentNames = mySQLdb.runQuery("select distinct department, division from courses");
         for (Object departmentName : departmentNames) {
             String name = ((JSONObject) departmentName).getString("department");
             String division = ((JSONObject) departmentName).getString("division");
-            JSONArray courseUnderDepartment = mySQLdb.runQuery(String.format("select * from courses where department='%s' and division='%s' and (term='%s' or term='%s')", name, division, term1, term2));
+            JSONArray courseUnderDepartment = mySQLdb.runQuery(String.format("select * from courses where department='%s' and division='%s' and (term='%s' or term='%s')", name.replaceAll("'","''"), division.replaceAll("'","''"), term1.replaceAll("'","''"), term2.replaceAll("'","''")));
             Department department = new Department(name);
             for (Object course : courseUnderDepartment) {
                 JSONObject temp = (JSONObject) course;
