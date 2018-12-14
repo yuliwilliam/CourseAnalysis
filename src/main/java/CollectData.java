@@ -34,10 +34,9 @@ public class CollectData {
             dataCollector.collectData();
             List<TimeStamp> timeStamps = dataCollector.getTimeStamps();
 
-            System.out.println(timeStamps.size());
-
             int i = 1;
             int size = timeStamps.size();
+            logger.info("collect " + size + " timestamps");
             for (TimeStamp timeStamp : timeStamps) {
                 sqlManager.insertTimeStamp(timeStamp);
                 logger.info("updated timestamp " + i + "/" + size + " - " + timeStamp.getCode());

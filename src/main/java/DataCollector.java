@@ -20,7 +20,7 @@ public class DataCollector {
 
     private final static Logger logger = LogManager.getLogger(DataCollector.class.getName());
 
-    private final static int numOfThread = 20;
+    private final static int numOfThread = 30;
 
     private List<Department> courses;
     private List<TimeStamp> timeStamps;
@@ -143,7 +143,8 @@ public class DataCollector {
 
         for (Course course : department.getCourses()) {
 
-            Document document = Jsoup.connect(course.getUrl()).get();
+            //time out when 2 minutes, input is in ms
+            Document document = Jsoup.connect(course.getUrl()).timeout(120 * 1000).get();
 
             Elements table = document.select("#u172 > tbody > tr");
 
