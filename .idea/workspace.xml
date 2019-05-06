@@ -2,11 +2,104 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d952eb89-2e5f-4aa8-9270-80e4a624afdf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_10_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_11_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_14_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_14_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_net_commons_net_3_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_16.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_2_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_core_js_2_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_cssparser_1_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_neko_htmlunit_2_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_text_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_11.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_11_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_11_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_11_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_11_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_client_9_4_8_v20180619.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_4_8_v20180619.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_4_8_v20180619.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_4_8_v20180619.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_xml_9_4_8_v20180619.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_api_9_4_8_v20180619.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_client_9_4_8_v20180619.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_common_9_4_8_v20180619.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_htmlunit_driver_2_30_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_jetty_repacked_9_4_8_v20180619.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_jetty_repacked_9_4_12_v20180830.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_server_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_server_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_14_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_141_59.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_serializer_2_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_xalan_2_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xercesImpl_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CollectData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CollectData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DataCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DataCollector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DataCollector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataCollector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CourseAnalysis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CourseAnalysis.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/ChangeLog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/LICENSE.BSD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/bin/phantomjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/arguments.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/child_process-examples.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/colorwheel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/countdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/detectsniff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/echoToFile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/features.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/fibo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/hello.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/injectme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/loadspeed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/loadurlwithoutcss.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/modernizr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/netlog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/netsniff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/openurlwithproxy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/outputEncoding.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/page_events.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/pagecallback.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/phantomwebintro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/post.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/postjson.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/postserver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/printenv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/printheaderfooter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/printmargins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/rasterize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/render_multi_url.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/responsive-screenshot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/run-jasmine.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/run-jasmine2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/run-qunit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/scandir.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/serverkeepalive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/simpleserver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/sleepsort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/stdin-stdout-stderr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/universe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/unrandomize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/useragent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/version.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/waitfor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/examples/walk_through_frames.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drivers/OSX/phantomjs-2.1.1-macosx/third-party.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GenerateReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GenerateReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GenerateReport.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GenerateReport.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,16 +123,50 @@
     <expand />
     <select />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/SQLManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="300">
+              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/MySQLdb.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="99" column="65" selection-start-line="99" selection-start-column="65" selection-end-line="99" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/LOG4J2.XML">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Course.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="810">
+              <caret line="70" column="60" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -47,8 +174,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CollectCourse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+            <state relative-caret-position="165">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,28 +184,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/TimeStamp.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DataCollector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="48" column="206" selection-start-line="48" selection-start-column="206" selection-end-line="48" selection-end-column="206" />
+            <state relative-caret-position="330">
+              <caret line="38" column="44" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2155#2156#0" expanded="true" />
-                <element signature="e#2182#2183#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DataCollector.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/AcornDataCollector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="145" column="53" selection-start-line="145" selection-start-column="53" selection-end-line="145" selection-end-column="53" />
+            <state relative-caret-position="120">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6144#6145#0" expanded="true" />
-                <element signature="e#6177#6178#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,11 +210,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CollectData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
+            <state relative-caret-position="360">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/GenerateReport.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="73" selection-start-line="73" selection-end-line="73" />
             </state>
           </provider>
         </entry>
@@ -147,12 +288,12 @@
         <option value="$PROJECT_DIR$/src/main/resources/LOG4J2.XML" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/CollectCourse.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/GenerateReport.java" />
         <option value="$PROJECT_DIR$/src/main/java/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SQLManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CollectData.java" />
         <option value="$PROJECT_DIR$/src/main/java/DataCollector.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CollectData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SQLManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GenerateReport.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -163,10 +304,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="y" value="29" />
     <option name="width" value="1440" />
-    <option name="height" value="820" />
+    <option name="height" value="821" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -174,7 +316,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -182,6 +323,17 @@
             <path>
               <item name="CourseAnalysis" type="b2602c69:ProjectViewProjectNode" />
               <item name="CourseAnalysis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CourseAnalysis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourseAnalysis" type="462c0819:PsiDirectoryNode" />
+              <item name="drivers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CourseAnalysis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourseAnalysis" type="462c0819:PsiDirectoryNode" />
+              <item name="drivers" type="462c0819:PsiDirectoryNode" />
+              <item name="OSX" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CourseAnalysis" type="b2602c69:ProjectViewProjectNode" />
@@ -212,14 +364,16 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="javadoc&#9;ACTION&#9;GenerateJavadoc&#10;database&#9;ACTION&#9;ActivateDatabaseToolWindow" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544828739427" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553743235421" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -335,12 +489,25 @@
       <workItem from="1544767476043" duration="9000" />
       <workItem from="1544769713218" duration="3457000" />
       <workItem from="1544810285992" duration="106000" />
-      <workItem from="1544827449160" duration="1286000" />
+      <workItem from="1544827449160" duration="1670000" />
+      <workItem from="1544915258185" duration="309000" />
+      <workItem from="1545027530100" duration="852000" />
+      <workItem from="1545191123324" duration="10000" />
+      <workItem from="1545191179204" duration="426000" />
+      <workItem from="1547251642729" duration="2191000" />
+      <workItem from="1547498264660" duration="1311000" />
+      <workItem from="1547938291037" duration="3591000" />
+      <workItem from="1547957607676" duration="1579000" />
+      <workItem from="1548119168939" duration="1195000" />
+      <workItem from="1552445833512" duration="3594000" />
+      <workItem from="1552453945268" duration="41000" />
+      <workItem from="1553741374116" duration="542000" />
+      <workItem from="1557186192319" duration="156000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94051000" />
+    <option name="totallyTimeSpent" value="110232000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -352,10 +519,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="820" extended-state="6" />
+    <frame x="-7" y="29" width="1440" height="821" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21173105" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25107297" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -364,7 +531,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32967034" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2912088" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29041097" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997253" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -464,51 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SeleniumUtility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Course.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
-          <folding>
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1495#1496#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/LOG4J2.XML">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/AcornDataCollector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="65" column="39" lean-forward="true" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CourseCollector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -521,7 +643,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
+        <state relative-caret-position="360">
           <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -529,37 +651,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/GenerateReport.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/SeleniumUtility.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MySQLdb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="61" column="38" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CollectData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SQLManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="135">
+          <caret line="17" column="97" selection-start-line="17" selection-start-column="97" selection-end-line="17" selection-end-column="97" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -568,7 +663,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TimeStamp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
+        <state relative-caret-position="720">
           <caret line="48" column="206" selection-start-line="48" selection-start-column="206" selection-end-line="48" selection-end-column="206" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -578,10 +673,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SQLManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="70" column="60" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CollectCourse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        <state relative-caret-position="165">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -590,13 +702,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DataCollector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="145" column="53" selection-start-line="145" selection-start-column="53" selection-end-line="145" selection-end-column="53" />
+        <state relative-caret-position="330">
+          <caret line="38" column="44" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6144#6145#0" expanded="true" />
-            <element signature="e#6177#6178#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/AcornDataCollector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CollectData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/LOG4J2.XML">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MySQLdb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="99" column="65" selection-start-line="99" selection-start-column="65" selection-end-line="99" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GenerateReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
         </state>
       </provider>
     </entry>
